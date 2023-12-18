@@ -227,9 +227,9 @@ const ShoppingCart = () => {
                   </Link>
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <img src="https://i.ibb.co/G9DC8S0/404-2.png" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div>
