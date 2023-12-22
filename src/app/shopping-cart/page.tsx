@@ -82,6 +82,7 @@ const ShoppingCart = () => {
                   key={product.id}
                   className='justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start'
                 >
+
                   <div className='relative w-52'>
                     <CustomImage product={product} fill />
                   </div>
