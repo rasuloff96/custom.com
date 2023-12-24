@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const ShoppingCart = () => {
+
   const [total, setTotal] = useState<number>(0)
   const [products, setProducts] = useState<ProductType[]>(
     JSON.parse(localStorage.getItem('carts') as string) || []
@@ -88,9 +89,14 @@ const ShoppingCart = () => {
                   </div>
                   <div className='sm:ml-4 sm:flex sm:w-full gap-x-4 sm:justify-between'>
                     <div className='mt-5 sm:mt-0'>
-                      <h2 className='text-lg font-bold text-gray-900 line-clamp-1'>
-                        {product.title}
-                      </h2>
+                      <Link
+                        href={`/product/${product.id}`}
+                      >
+                        <h2 className='text-lg font-bold text-gray-900 line-clamp-1 transition-all hover: hover:text-blue-400'
+                        >
+                          {product.title}
+                        </h2>
+                      </Link>
                       <p className='mt-1 text-xs text-gray-700 line-clamp-2'>
                         {product.description}
                       </p>
