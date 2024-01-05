@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <header className=" flex items-center px-4 flex-wrap  md:px-12 py-2 justify-between fixed top-0 w-full z-50 shadow bg-white ">
 
-      <div className="flex justify-center items-center gap-5">
+      <div className="flex justify-center items-center">
         <Link href={"/"}>
           <Image
             src={"/custom-logo.png"}
@@ -34,7 +34,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <form className="flex w-96 ml-4 mr-5">
+        <form className="flex w-96 ml-52 ">
           <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
           <div className="relative w-full" >
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
