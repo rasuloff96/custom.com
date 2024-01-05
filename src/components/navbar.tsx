@@ -49,7 +49,7 @@ const Navbar = () => {
 
 
       <div className="flex items-center space-x-2.5 text-sm">
-        <nav className="md:ml-auto flex flex-wrap items-center select-none text-base justify-center gap-4">
+        <nav className="md:ml-auto flex flex-wrap items-center select-none text-base justify-center gap-3">
           {/* Kirish */}
           <Link
             href={"/access"}
