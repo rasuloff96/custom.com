@@ -6,7 +6,6 @@ import { Dialog } from "@headlessui/react"
 import CustomImage from "@/components/image"
 import { StarIcon as StarIconOutline } from '@heroicons/react/24/outline';
 import { StarIcon } from '@heroicons/react/24/solid';
-import ReactStars from 'react-stars'
 import { toast } from "react-toastify"
 
 const ProductDetailedPage = () => {

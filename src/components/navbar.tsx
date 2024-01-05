@@ -22,7 +22,7 @@ const Navbar = () => {
 
 
   return (
-    <header className=" flex items-center px-4 md:px-12 py-2 justify-between fixed top-0 w-full z-50 shadow bg-white ">
+    <header className=" flex items-center px-4 flex-wrap  md:px-12 py-2 justify-between fixed top-0 w-full z-50 shadow bg-white ">
 
       <div className="flex justify-center items-center gap-5">
         <Link href={"/"}>
@@ -34,11 +34,6 @@ const Navbar = () => {
           />
         </Link>
 
-        <div className="border rounded w-28 h-10 flex justify-center items-center">
-          <p className="text-base ">Category</p>
-        </div>
-
-
         <form className="flex w-96 ml-4 mr-5">
           <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
           <div className="relative w-full" >
@@ -47,75 +42,68 @@ const Navbar = () => {
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
               </svg>
             </div>
-            <input type="search" id="default-search" className="block w-full h-11 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Istalgan mahsulotni qidiring ..." required />
-            {/* Submit Button */}
-            {/* <button type="submit" className="text-white h-9 absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> */}
+            <input type="search" id="default-search" className="block w-full outline-none h-10 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Istalgan mahsulotni qidiring ..." required />
           </div>
         </form>
       </div>
 
 
-
-
-
-
-
-
-
       <div className="flex items-center space-x-2.5 text-sm">
-        <nav className="md:ml-auto flex flex-wrap items-center select-none text-base justify-center">
-          
+        <nav className="md:ml-auto flex flex-wrap items-center select-none text-base justify-center gap-4">
           {/* Kirish */}
           <Link
             href={"/access"}
-            className="flex justify-center items-center mr-5"
+            className="flex justify-center items-center"
           >
             <Image
-              src={"/user.png"}
-              alt="user icon"
-              width={24}
-              height={24}
+              src={"/sign-in.png"}
+              alt="sign in photo"
+              width={25}
+              height={25}
             />
-            <p className="text-base ml-2">Kirish</p>
           </Link>
 
           {/* saqlanganlar */}
-          <Link href={"/wishes"} className="flex justify-center items-center mr-5">
+          {/* <Link href={"/wishes"} className="flex justify-center items-center">
             <Image src={"/like.png"}
               width={22}
               height={22}
               alt="saqlangan mahsulotlar"
             />
-            <p className="text-base ml-2">Saqlanganlar</p>
-          </Link>
+          </Link> */}
           {/* savat */}
           <Link href={"/shopping-cart"} className="flex justify-center items-center">
             <Image src={"/shopping-cart.png"}
               alt="basket icon"
-              width={22}
-              height={22}
+              width={25}
+              height={25}
             />
-            <p className="text-base ml-2">Savat</p>
           </Link>
 
-          {/* Tizmiga kirish va ro'yxatdan o'tish tugmasi */}
-          {/* <Link href={"/log-in"} className="ml-2 mr-1">
-            <button className='button flex justify-center items-center w-33 h-10 ml-2 text-sm bg-blue-600 text-white border-transparent hover:border-blue-600 hover:bg-transparent hover:text-black'>
-              Log in
-            </button>
+          {/* Notifications */}
+          <Link
+          className="flex justify-center items-center"
+            href={"/notification"}
+          >
+            <Image
+              src={"/notification.png"}
+              width={25}
+              height={25}
+              alt="notification icon"
+            />
           </Link>
-          <Link href={"/sign-up"}>
-            <button className="button flex justify-center items-center w-33 h-10 ml-2 text-sm bg-blue-600 text-white border-transparent hover:border-blue-600 hover:bg-transparent hover:text-black">
-              Sign up
-            </button>
-          </Link> */}
 
-          {/* User Profile Here */}
-          {/* <Link href={"/client-profile"}>
-          <button className="flex justify-center items-center rounded-full border-sky-500">
-            Profile
-          </button>
-        </Link> */}
+          {/* User profile */}
+          <Link className="flex justify-center items-center"
+            href={"/profile"}
+          >
+            <Image
+              src={"/user.png"}
+              width={25}
+              height={25}
+              alt="user profile"
+            />
+          </Link>
         </nav>
       </div>
     </header>
