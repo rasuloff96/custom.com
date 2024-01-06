@@ -22,13 +22,21 @@ const Navbar = () => {
 
 
   return (
-    <header className=" flex items-center px-4 flex-wrap  md:px-12 py-2 justify-between fixed top-0 w-full z-50 shadow bg-white ">
+    <header className=" flex items-center px-4 flex-wrap  md:px-12 py-2 justify-between fixed top-0 w-full z-50 shadow bg-white dark:bg-gray-900 dark:text-white">
 
       <div className="flex justify-center items-center">
         <Link href={"/"}>
           <Image
+          className="inline dark:hidden"
             src={"/custom-logo.png"}
-            alt="logo here"
+            alt="light mode  logo here"
+            width={150}
+            height={40}
+          />
+          <Image
+            className="hidden dark:inline"
+            src={"/custom-logo-dark.png"}
+            alt="dark mode logo here"
             width={150}
             height={40}
           />
@@ -60,6 +68,7 @@ const Navbar = () => {
               alt="sign in photo"
               width={25}
               height={25}
+              color="white"
             />
           </Link>
 
@@ -82,7 +91,7 @@ const Navbar = () => {
 
           {/* Notifications */}
           <Link
-          className="flex justify-center items-center"
+            className="flex justify-center items-center"
             href={"/notification"}
           >
             <Image
