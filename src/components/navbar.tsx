@@ -2,16 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-// import { Dropdown } from 'flowbite-react';
-
 import React, { useState } from "react";
-import { IoMdNotificationsOutline } from 'react-icons/io'
-import { IoIosHelpCircleOutline } from 'react-icons/io';
-import { CiLogout } from 'react-icons/ci';
-import { CiSettings } from 'react-icons/ci'
-import { RiEditBoxLine } from 'react-icons/ri'
-import { CgProfile } from 'react-icons/cg'
-
+import Categories from "./categories";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -22,8 +14,9 @@ const Navbar = () => {
 
 
   return (
-    <header className=" flex items-center px-4 flex-wrap  md:px-12 py-2 justify-between fixed top-0 w-full z-50 shadow bg-white dark:bg-gray-900 dark:text-white">
-
+    <>
+    
+    <header className=" flex items-center px-4 flex-wrap md:px-12 py-2 justify-between fixed top-0 w-full z-50 shadow bg-white dark:bg-gray-900 dark:text-white">
       <div className="flex justify-center items-center">
         <Link href={"/"}>
           <Image
@@ -98,6 +91,8 @@ const Navbar = () => {
         </nav>
       </div>
     </header>
+    <Categories/>
+    </>
   );
 };
 
