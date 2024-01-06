@@ -22,10 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={montserrat.className }>
         <Navbar />
         <ToastContainer />
+        <main className='dark:bg-gray-900 py-16'>
         {children}
+        </main>
         </body>
     </html>
   )

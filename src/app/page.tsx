@@ -4,6 +4,7 @@ import Hero from '@/app/hero';
 import Product from '@/components/product';
 import Statistic from '@/components/statistic';
 import { ProductType } from '@/interfaces';
+import CatalogPage from '@/components/catalog';
 
 export default async function Home() {
   const res = await fetch('https://fakestoreapi.com/products');
@@ -12,6 +13,7 @@ export default async function Home() {
 
   return (
     <main className='min-h-screen max-w-7xl mx-auto px-8 xl:px-0 mt-16'>
+      <CatalogPage />
       <Hero />
       <section className='flex flex-col space-y-12 '>
         <h1 className='text-5xl font-bold text-center'>Custom Shop Deal</h1>
