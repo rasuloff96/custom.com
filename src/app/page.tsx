@@ -5,6 +5,7 @@ import Product from '@/components/product';
 import Statistic from '@/components/statistic';
 import { ProductType } from '@/interfaces';
 import CatalogPage from '@/components/catalog';
+import Link from "next/link";
 
 export default async function Home() {
   const res = await fetch('https://fakestoreapi.com/products');
@@ -29,7 +30,10 @@ export default async function Home() {
             </svg>
           </div>
           <div className='flex items-center justify-center transition-all text-blue-600 hover:underline dark:text-blue-300'>
-            <p className='font-medium text-sm'>Explore more</p>
+            <Link href={"/deals"}>
+              <p className='font-medium text-sm'>Explore more</p>
+            </Link>
+
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
             </svg>

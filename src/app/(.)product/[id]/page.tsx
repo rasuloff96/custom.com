@@ -7,6 +7,7 @@ import CustomImage from "@/components/image"
 import { StarIcon as StarIconOutline } from '@heroicons/react/24/outline';
 import { StarIcon } from '@heroicons/react/24/solid';
 import { toast } from "react-toastify"
+import ReactStars from "react-stars"
 
 const ProductDetailedPage = () => {
   const [loading, setLoading] = useState(false)
