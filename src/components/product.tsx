@@ -13,7 +13,7 @@ const Product: FC<{ product: ProductType }> = ({ product }) => {
     return (
         <Link className="w-56" href={`/product/${product.id}`}>
             <div className="flex h-96 flex-col group transition-transform ease-out duration-200 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <div className="relative flex mb-1 justify-center w-56 h-80 items-center border rounded-lg flex-1 dark:border-slate-700">
+                <div className="relative flex mb-1 justify-center w-52 h-52 items-center border rounded-lg flex-1 dark:border-slate-700">
                     <div className="w-28 h-52 relative flex justify-center items-center ">
                         <CustomImage product={product} fill />
                     </div>
